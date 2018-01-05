@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+odoo:
+  version: 8.0
+  pkg: odoo
+  service: odoo
+  config:
+    db_user: odoo
+    log_level: info
+    debug_mode: False
+    addons_path: /usr/lib/python2.7/dist-packages/openerp/addons

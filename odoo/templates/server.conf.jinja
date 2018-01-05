@@ -1,0 +1,13 @@
+{%- from "odoo/map.jinja" import odoo with context -%}
+{%- set config = odoo.config -%}
+[options]
+db_host = {{ config.get('db_host', False) }}
+db_port = {{ config.get('db_port', False) }}
+db_user = {{ config.get('db_user') }}
+db_password = {{ config.get('db_password', False) }}
+debug_mode = {{ config.get('debug_mode', False) }}
+{%- if config.get('log_handlers', False) %}
+log_handler = {{ config.get('log_handlers')|join(',') }}
+{%- endif %}
+log_level = {{ config.get('log_level') }}
+addons_path = {{ config.get('addons_path') }}

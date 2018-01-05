@@ -1,0 +1,3 @@
+odoo:
+  lookup:
+    master: odoo-master
