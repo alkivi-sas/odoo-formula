@@ -12,14 +12,17 @@ odoo_repo:
     - keyserver: pgp.mit.edu
     - clean_file: true
 
+{% if odoo.get('version', '8.0') == '8.0' %}
 odoo_dependencies:
   pkg.installed:
     - pkgs:
       - python-pypdf
+    - require_in:
+      - pkg: odoo_pkg
+{% endif %}
 
 odoo_pkg:
   pkg.installed:
     - name: {{ odoo.pkg }}
     - require:
       - pkgrepo: odoo_repo
-      - pkg: odoo_dependencies
