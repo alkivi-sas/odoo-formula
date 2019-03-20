@@ -8,8 +8,8 @@ odoo_repo:
     - humanname: Odoo {{ odoo.version }}
     - name: deb http://nightly.odoo.com/{{ odoo.version }}/nightly/deb/ ./
     - file: /etc/apt/sources.list.d/odoo.list
-    - keyid: 8183CBB5
-    - keyserver: pgp.mit.edu
+    - keyid: DEF2A2198183CBB5
+    - keyserver: keyserver.ubuntu.com
     - clean_file: true
 
 {% if odoo.get('version', '8.0') == '8.0' %}
